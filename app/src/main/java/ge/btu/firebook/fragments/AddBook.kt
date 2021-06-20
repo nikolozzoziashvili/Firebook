@@ -31,7 +31,7 @@ class AddBook : Fragment(R.layout.fragment_add_book){
         editTextAuthors = view.findViewById(R.id.editTextAuthors)
         editTextDescription = view.findViewById(R.id.editTextDescription)
         mAuth = FirebaseAuth.getInstance()
-        database = FirebaseDatabase.getInstance().getReference("book")
+        database = FirebaseDatabase.getInstance().getReference("books")
         this.buttonListener()
 
     }
@@ -44,14 +44,20 @@ class AddBook : Fragment(R.layout.fragment_add_book){
             if (name.isEmpty() || authors.isEmpty() || category.isEmpty() || description.isEmpty()){
                 Toast.makeText(requireActivity(), "Forms should not be empty!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
+            } else {
+                bookInfo(name, category, authors, description)
+                Toast.makeText(requireActivity(), "done", Toast.LENGTH_SHORT).show()
             }
-            bookInfo(name, category, authors, description)
+
         }
     }
 
     private fun bookInfo(name: String, category: String, authors: String, description: String) {
-        val book = bookInfo(name, category, authors, description)
-        database.child(name).setValue(book).addOnCompleteListener{
+        val map: HashMap<String, Any> = HashMap()
+        map.put("category", category)
+        map.put("authors", authors)
+        map.put("description", description)
+        database.child(name).setValue(map).addOnCompleteListener{
             task ->
             if (task.isSuccessful){
                 Toast.makeText(requireActivity(), "Successful!", Toast.LENGTH_SHORT).show()
