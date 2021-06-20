@@ -55,8 +55,6 @@ class AddBook : Fragment(R.layout.fragment_add_book){
             task ->
             if (task.isSuccessful){
                 Toast.makeText(requireActivity(), "Successful!", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(requireActivity(), "Not Successful!", Toast.LENGTH_SHORT).show()
             }
 
         }
