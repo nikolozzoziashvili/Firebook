@@ -69,6 +69,5 @@ class MainActivity : AppCompatActivity() {
     }
     private fun goToRecovery(){
         startActivity(Intent(this, ForgotCredentials::class.java))
-
     }
 }

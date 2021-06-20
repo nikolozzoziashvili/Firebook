@@ -31,7 +31,7 @@ class AddBook : Fragment(R.layout.fragment_add_book){
         editTextAuthors = view.findViewById(R.id.editTextAuthors)
         editTextDescription = view.findViewById(R.id.editTextDescription)
         mAuth = FirebaseAuth.getInstance()
-        database = FirebaseDatabase.getInstance().getReference("Books")
+        database = FirebaseDatabase.getInstance().getReference("book")
         this.buttonListener()
 
     }
@@ -41,7 +41,7 @@ class AddBook : Fragment(R.layout.fragment_add_book){
             val authors = editTextAuthors.text.toString()
             val category = editTextCategory.text.toString()
             val description = editTextDescription.text.toString()
-            if (authors.isEmpty() || category.isEmpty() || description.isEmpty()){
+            if (name.isEmpty() || authors.isEmpty() || category.isEmpty() || description.isEmpty()){
                 Toast.makeText(requireActivity(), "Forms should not be empty!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
