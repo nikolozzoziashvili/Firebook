@@ -45,6 +45,7 @@ class PasswordChange : AppCompatActivity() {
                             task ->
                             if (task.isSuccessful){
                                 Toast.makeText(this, "Password changed successfully!", Toast.LENGTH_SHORT).show()
+                                onBackPressed()
                             }
                         }
                     } else {

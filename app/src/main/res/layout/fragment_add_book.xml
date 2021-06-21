@@ -19,12 +19,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/save"
+        android:id="@+id/choose"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="204dp"
         android:layout_height="225dp"
         android:layout_marginTop="24dp"
-        android:text="Save"
+        android:text="Choose Picture"
         app:backgroundTint="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +51,7 @@
         android:hint="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/save"
+        app:layout_constraintTop_toBottomOf="@+id/choose"
         android:inputType="text"/>
 
     <EditText

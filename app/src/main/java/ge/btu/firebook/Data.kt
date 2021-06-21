@@ -1,11 +1,13 @@
 package ge.btu.firebook
 
-import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 
-data class Data(
-    val bookName: String,
-    val category: String,
-    val authors: String,
-    val description: String,
-    val bookImage: ImageView
-)
+
+class Data : AppCompatActivity() {
+    val bookName: String = ""
+    val category: String = ""
+    val authors: String = ""
+    val description: String = ""
+
+
+}

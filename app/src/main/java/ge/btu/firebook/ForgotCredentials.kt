@@ -38,6 +38,7 @@ class ForgotCredentials : AppCompatActivity() {
                 task ->
                 if (task.isSuccessful){
                     Toast.makeText(this, "Password reset link sent to the email address", Toast.LENGTH_SHORT).show()
+                    onBackPressed()
                 } else {
                     Toast.makeText(this, "Password reset was unsuccessful. Please try again", Toast.LENGTH_SHORT).show()
                 }
