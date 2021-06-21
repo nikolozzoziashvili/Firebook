@@ -46,25 +46,25 @@ class AddBook : Fragment(R.layout.fragment_add_book){
                 return@setOnClickListener
             } else {
                 bookInfo(name, category, authors, description)
-                Toast.makeText(requireActivity(), "done", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(requireActivity(), "done", Toast.LENGTH_SHORT).show()
             }
 
         }
     }
 
     private fun bookInfo(name: String, category: String, authors: String, description: String) {
-        val map: HashMap<String, Any> = HashMap()
-        map["category"] = category
-        map["authors"] = authors
-        map["description"] = description
-        database.child(name).setValue(map).addOnCompleteListener{
+        val map: HashMap<String, String> = hashMapOf(
+                "category" to category,
+                "authors" to authors,
+                "description" to description
+        )
+        database.child(name).setValue(category).addOnCompleteListener{
             task ->
             if (task.isSuccessful){
                 Toast.makeText(requireActivity(), "Successful!", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(requireActivity(), "Not Successful!", Toast.LENGTH_SHORT).show()
             }
-
         }
     }
 }
