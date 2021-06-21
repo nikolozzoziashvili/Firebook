@@ -1,6 +1,6 @@
 # FireBook 
 # Opensource Book Portal
-### Book portal for uploading books to the database and adding them to your favorite books
+### Book portal for uploading books to the database and adding them to your favorite books list
 # Functions
 - Authorization / Registration
 - Password Recovery / Change
