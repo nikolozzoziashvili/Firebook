@@ -1,8 +1,8 @@
 # FireBook 
-# Opensource წიგნების პორტალი
-### წიგნების პორტალი, სადაც მომხმარებელს შეუძლია ატვირთოს, წაიკითხოს და რჩეულებში ჩააგდოს სასურველი წიგნი
-# ფუნქციები
-- ავტორიზაცია / რეგისტრაცია
-- პაროლის აღდგენა / შეცვლა
-- წიგნების დამატება Firebase Realtime Database-ში სახელის, კატეგორიის, ავტორისა და მოკლე აღწერის მიხედვით
+# Opensource Book Portal
+### Book portal for uploading books to the database 
+# Functions
+- Authorization / Registration
+- Password Recovery / Change
+- Adding books to the Firebase Realtime Database 
 ### Test user: abc@abc.abc password: Aa1234567
