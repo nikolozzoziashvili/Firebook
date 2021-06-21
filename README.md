@@ -5,4 +5,4 @@
 - ავტორიზაცია / რეგისტრაცია
 - პაროლის აღდგენა / შეცვლა
 - წიგნების დამატება Firebase Realtime Database-ში სახელის, კატეგორიის, ავტორისა და მოკლე აღწერის მიხედვით
-### Test user user: abc@abc.abc password: Aa1234567
+### Test user: abc@abc.abc password: Aa1234567
