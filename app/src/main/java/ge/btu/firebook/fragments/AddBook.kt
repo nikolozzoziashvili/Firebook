@@ -54,9 +54,9 @@ class AddBook : Fragment(R.layout.fragment_add_book){
 
     private fun bookInfo(name: String, category: String, authors: String, description: String) {
         val map: HashMap<String, Any> = HashMap()
-        map.put("category", category)
-        map.put("authors", authors)
-        map.put("description", description)
+        map["category"] = category
+        map["authors"] = authors
+        map["description"] = description
         database.child(name).setValue(map).addOnCompleteListener{
             task ->
             if (task.isSuccessful){
